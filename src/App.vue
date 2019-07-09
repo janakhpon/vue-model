@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Reverse/>
+    <Multireverse/>
   </div>
 </template>
 
 <script>
-import Reverse from './components/Reverse.vue'
+import Multireverse from './components/Multireverse.vue'
 
 export default {
   name: 'app',
   components: {
-    Reverse
+    Multireverse
   }
 }
 </script>
