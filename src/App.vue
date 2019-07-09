@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Generator/>
+    <Reverse/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Generator from './components/Genrator.vue'
+import Reverse from './components/Reverse.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    Generator
+    Reverse
   }
 }
 </script>
