@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Multireverse/>
+    <Limiter/>
   </div>
 </template>
 
 <script>
-import Multireverse from './components/Multireverse.vue'
+import Limiter from './components/Limiter.vue'
 
 export default {
   name: 'app',
   components: {
-    Multireverse
+    Limiter
   }
 }
 </script>
