@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <Componentone :parentData="myData" v-on:childToParent="onChildClick" v-on:increment="counter++">
+    <Componentone :parentData="myData" v-on:childToParent="onChildClick" v-on:increment="counter++" />
   </div>
 </template>
 
