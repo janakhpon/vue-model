@@ -6,33 +6,50 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <h3>POSTS</h3>
+
+    <div v-for="item in info_set" v-bind:key="item">
+        <img v-bind:src='item.url' alt="image" />
+        <h2> {{item.title}} </h2>
+        <p>{{item.summary}}</p>
+        <h4>{{item.category}}</h4>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
+  data: function() {
+    return {
+       info_set:[
+      {
+        url:'https://media2.giphy.com/media/1Mng0gXC5Tpcs/giphy.gif?cid=790b76115d22f5b5664f77537789eb22&rid=giphy.gif',
+        title:'dancing robot',
+        summary : 'recently this crazy idiot robot turned out to be a big star for a while',
+        category: 'science',
+      },
+      {
+        url:'https://media.giphy.com/media/N8wR1WZobKXaE/giphy.gif',
+        title:'heart broken robot',
+        summary : 'Oh man that is so much pain! ... I ... can ..not take it ',
+        category: 'science',
+      },
+      {
+        url:'https://media3.giphy.com/media/yPnvBQhJbS7WU/giphy.gif?cid=790b76115d22f6497633457963011094&rid=giphy.gif',
+        title:'emotional robot',
+        summary : 'recently this crazy idiot robot turned out to be a big star for a while',
+        category: 'science',
+      },
+      {
+        url:'https://media2.giphy.com/media/znFqUjxjw6WAM/giphy.gif?cid=790b76115d22f9893651784a458b2f9b&rid=giphy.gif',
+        title:'dumbed face robot',
+        summary : 'Oh man that is so much pain! ... I ... can ..not take it ',
+        category: 'science',
+      }
+    ]
+    };
+  },
   props: {
     msg: String
   }
